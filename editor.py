@@ -346,7 +346,7 @@ class App:
         tick = int(self.items_tick[row] / 48)
         self.playing_row = row
         for ch in range(4):
-            px.play(ch, [ch], tick=tick)
+            px.play(ch, [ch], sec=tick/120)
 
     # ===============================================
     # ピアノ
@@ -367,7 +367,7 @@ class App:
                 if pattern["key"] == ":" + str(value):
                     self.play_piano_note(key, None, pattern)
         if not self.piano_key is None and px.btnr(self.piano_key):
-            px.play(0, [0], tick=480)
+            px.play(0, [0], sec=4)
             self.piano_key = None
         rest_pressed = px.btnp(px.KEY_R) or px.btnp(px.KEY_MINUS)
         channel = self.cx1 - 1
