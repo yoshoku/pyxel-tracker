@@ -4,7 +4,7 @@ Key Command List
   Escape    : Go back to previous screen
   BackSpace : Delete note
   Space     : Move the cursor down one row
-  @         : (in the far left column)
+  `         : (in the far left column)
               Set the tempo, beat, and note length.
               (in the other columns)
               Set tone, volume, and quantize.

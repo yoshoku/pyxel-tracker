@@ -541,7 +541,7 @@ class App:
     def edit_notes(self):
         if px.btnp(px.KEY_ESCAPE):
             self.is_help_mode = True
-        if px.btnp(px.KEY_AT):
+        if px.btnp(px.KEY_BACKQUOTE):
             self.open_params()
         if px.btnp(px.KEY_TAB):
             self.numstock = 0
@@ -703,7 +703,7 @@ class App:
         self.auto_delete_rows()
 
     def edit_params(self):
-        if px.btnp(px.KEY_RETURN) or px.btnp(px.KEY_AT) or px.btnp(px.KEY_ESCAPE):
+        if px.btnp(px.KEY_RETURN) or px.btnp(px.KEY_BACKQUOTE) or px.btnp(px.KEY_ESCAPE):
             if repr(self.items) == self.params_saved:
                 self.pool.pop(len(self.pool) - 1)
             self.close_params()
@@ -1111,9 +1111,9 @@ dict_playkey = {
     px.KEY_L: ("a#", 0, 33, 2, "L", 10),
     px.KEY_PERIOD: ("b", 0, 36, 10, ".", 11),
     px.KEY_SLASH: ("c", 1, 42, 10, "/", 0),
-    px.KEY_COLON: ("c#", 1, 45, 2, ":", 1),
-    px.KEY_UNDERSCORE: ("d", 1, 48, 10, "_", 2),
-    px.KEY_RIGHTBRACKET: ("d#", 1, 51, 2, "]", 3),
+    px.KEY_QUOTE: ("c#", 1, 45, 2, "'", 1),
+    # px.KEY_UNDERSCORE: ("d", 1, 48, 10, "_", 2),
+    # px.KEY_RIGHTBRACKET: ("d#", 1, 51, 2, "]", 3),
 }
 
 list_beat = [6, 12, 18, 24, 30, 36, 42, 48, 60]
